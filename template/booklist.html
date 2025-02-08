@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Libros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">HOLA MUNDO</h1>
+
+    {% for book in books_list %}
+        <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+            <h1 class="text-2xl font-bold text-gray-800 mb-4">LIBRO: {{ book.id }}</h1>
+            <ul class="space-y-2">
+                <li class="text-gray-700"><span class="font-semibold">Title:</span> {{ book.title }}</li>
+                <li class="text-gray-700"><span class="font-semibold">Body:</span> {{ book.body }}</li>
+                <li class="text-gray-700"><span class="font-semibold">Author:</span> {{ book.author }}</li>
+                <li class="text-gray-700"><span class="font-semibold">Pages:</span> {{ book.pages }}</li>
+                <li class="text-gray-700"><span class="font-semibold">Year:</span> {{ book.year }}</li>
+            </ul>
+        </div>
+    {% empty %}
+        <h3 class="text-2xl text-center text-red-500">No has agregado ningún libro</h3>
+    {% endfor %}
+</body>
+</html>
