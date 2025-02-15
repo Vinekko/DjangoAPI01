@@ -40,6 +40,10 @@ INSTALLED_APPS = [
 
     #local
     'library',
+    'apis',
+
+    #third party
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
